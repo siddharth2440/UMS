@@ -1,0 +1,42 @@
+<section>
+    <div class="links">
+        <a href="/" class="underline text-[0.9rem] text-green-50">Dashboard</a>
+        <span class="text-[0.9rem] text-green-50"> / <span>New Customer</span></span>
+    </div>
+
+    <h1 class="text-2xl mt-3 text-red-50 font-[600]"> Edit : <span class="text-xl items-center mt-3 text-red-400 font-[600]"><%-user[0].firstName %> <%-user[0].lastName %></span></h1>
+
+    <div class="form mt-6 flex items-center justify-start">
+        <form action="/edit/<%-user[0]._id %>" method="GET" class="flex items-start justify-start flex-col gap-5">
+            <div class="firstName">
+                <label class="text-white">First Name :</label>
+                <input type="text" class="text-black ml-[4.5rem] w-[16vw] rounded-sm py-1 px-2" name="firstName" value="<%-user[0].firstName %>" required>
+            </div>
+
+            <div class="lastName">
+                <label class="text-white">Last Name :</label>
+                <input type="text" name="lastName" class="text-black w-[16vw] ml-[4.5rem] rounded-sm py-1 px-2" value="<%-user[0].lastName %>">
+            </div>
+
+            <div class="telephone">
+                <label class="text-white">Telephone :</label>
+                <input type="number" name="telephone" class="text-black w-[16vw] ml-[4.5rem] rounded-sm py-1 px-2" value="<%-user[0].tel %>">
+            </div>
+
+            <div class="email">
+                <label class="text-white">Email :</label>
+                <input type="email" name="userEmail" class="text-black w-[16vw] ml-[6.7rem] rounded-sm py-1 px-2" value="<%-user[0].email %>">
+            </div>
+
+            <div class="CustomerDeatils flex gap-3">
+                <label class="text-white ">Customer Details</label>
+                <textarea name="details" id="" cols="30" rows="10" class="text-black ml-6 rounded-sm py-1 px-2" value="<%-user[0].details %>"></textarea>
+            </div>
+
+            <div class="btns flex items-center justify-start gap-5">
+                <button type="submit" class="ml-[12vw] rounded-sm p-1 text-green-50 bg-green-500 shadow-lg">Update</button>
+                <a href="/" class="ml-[12vw] rounded-sm p-1 text-green-50 bg-red-500 shadow-lg">Back</a>
+            </div>
+        </form>
+    </div>
+</section>

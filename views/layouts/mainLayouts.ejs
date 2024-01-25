@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- remix-icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css" integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css CDN -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('../partials/navBar') %>
+    <main class="relative top-[9vh] w-full h-[90vh] bg-gradient-to-tr from-[#291829] via-[#271428] via-[#261026] via-[#240c24] to-[#230723] flex gap-4 justify-center items-start p-2 border">
+        <div class="sticky left-0 border shadow-2xl rounded-lg w-[20vw] h-[80vh] bg-gradient-to-r from-[#190019] via-[#150519] via-[#120a17] via-[#110e15] to-[#111111]">
+            <%- include('../partials/asideBar') %>
+        </div>
+        <div class="bg-silver-400 h-full border p-4 w-[80vw] ">
+            <%-body%>
+        </div>
+    </main>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

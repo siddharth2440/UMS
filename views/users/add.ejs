@@ -1,0 +1,38 @@
+<section>
+    <div class="links">
+        <a href="/" class="underline text-[0.9rem] text-green-50">Dashboard</a>
+        <span class="text-[0.9rem] text-green-50"> / <span>New Customer</span></span>
+    </div>
+
+
+    <div class="form mt-6 flex items-center justify-start">
+        <form action="/add" method="POST" class="flex items-start justify-start flex-col gap-5">
+            <div class="firstName">
+                <label class="text-white">First Name :</label>
+                <input type="text" class="text-black ml-[4.5rem] w-[16vw] rounded-sm py-1 px-2" name="firstName" required>
+            </div>
+
+            <div class="lastName">
+                <label class="text-white">Last Name :</label>
+                <input type="text" name="lastName" class="text-black w-[16vw] ml-[4.5rem] rounded-sm py-1 px-2">
+            </div>
+
+            <div class="telephone">
+                <label class="text-white">Telephone :</label>
+                <input type="number" name="telephone" class="text-black w-[16vw] ml-[4.5rem] rounded-sm py-1 px-2">
+            </div>
+
+            <div class="email">
+                <label class="text-white">Email :</label>
+                <input type="email" name="userEmail" class="text-black w-[16vw] ml-[6.7rem] rounded-sm py-1 px-2">
+            </div>
+
+            <div class="CustomerDeatils flex gap-3">
+                <label class="text-white ">Customer Details</label>
+                <textarea name="details" id="" cols="30" rows="10" placeholder="Enter your details...." class="text-black ml-6 rounded-sm py-1 px-2"></textarea>
+            </div>
+
+            <button type="submit" class="ml-[12vw] rounded-sm p-1 text-green-50 bg-green-500 shadow-lg">Add Customer</button>
+        </form>
+    </div>
+</section>

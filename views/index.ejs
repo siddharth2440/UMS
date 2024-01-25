@@ -1,0 +1,33 @@
+<section class=" flex flex-col items-center justify-between gap-9">
+    <div class="top flex align-center justify-around gap-[45rem]">
+        <h2 class="text-3xl font-[500] text-green-50">Dashboard</h2>
+        <a href="/add" class="border rounded-md px-2 py-1"><i class="ri-add-box-fill text-green-300"></i><span class="text-green-50"> New User</span></a>
+    </div>
+
+    <table class="">
+        <thead class="">
+            <tr class="text-green-50 text-[0.9rem] font-[600]">
+                <td scope="col" class=" px-4 py-2 text-center">First Name</th>
+                <td scope="col" class=" px-4 py-2 text-center">Last Name</th>
+                <td scope="col" class="px-4 py-2 text-center">Email</th>
+                <th scope="col" class="px-4 py-2 text-center">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% users.forEach(element => { %>
+                 <tr>
+                    <td class="text-green-50 px-3 capitalize"><%= element.firstName %></td>
+                    <td class="text-green-50 px-3 capitalize"><%= element.lastName %></td>
+                    <td class="text-green-50 px-3 capitalize"><%= element.email %></td>
+
+                    <td class="btns flex gap-2">
+                        <a href="/view/<%-element._id %>"><i class="ri-eye-line text-xl text-red-50 pl-4"></i></a>
+                        <a href="/edit/<%-element._id %>"><i class="ri-edit-box-line text-xl text-red-50 pl-4"></i></a>
+                        <form action="/delete/<%-element._id %>/?_method=DELETE" method="POST" class="pl-4"><button type="submit"><i class="ri-delete-bin-7-fill text-xl text-red-500"></i></button></form>
+                    </td>
+                 </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</section>
